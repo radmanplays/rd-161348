@@ -2,9 +2,7 @@ package com.mojang.minecraft.level;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import net.lax1dude.eaglercraft.internal.vfs2.VFile2;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.zip.GZIPInputStream;
@@ -91,7 +89,11 @@ public class Level {
 
 	public boolean load() {
 		try {
-			DataInputStream e = new DataInputStream(new GZIPInputStream(new FileInputStream(new File("level.dat"))));
+			VFile2 file = new VFile2("level.dat");
+			if (!file.exists()) {
+				return false;
+			}
+			DataInputStream e = new DataInputStream(new GZIPInputStream(file.getInputStream()));
 			e.readFully(this.blocks);
 			this.calcLightDepths(0, 0, this.width, this.height);
 
@@ -109,7 +111,8 @@ public class Level {
 
 	public void save() {
 		try {
-			DataOutputStream e = new DataOutputStream(new GZIPOutputStream(new FileOutputStream(new File("level.dat"))));
+			VFile2 file = new VFile2("level.dat");
+			DataOutputStream e = new DataOutputStream(new GZIPOutputStream(file.getOutputStream()));
 			e.write(this.blocks);
 			e.close();
 		} catch (Exception var2) {
