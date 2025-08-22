@@ -1,14 +1,14 @@
- rd-160052_TeaVM Developers
+ rd-161348_TeaVM Developers
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  radmanplays:
-  - Decompiled and ported rd-160052's codebase to TeaVM
+  - Decompiled and ported rd-161348's codebase to TeaVM
   - soon
  
- Other code used in rd-160052_TeaVM
+ Other code used in rd-161348_TeaVM
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- rd-160052
+- rd-161348
 - Lax1dude's EaglerAdapter (OpenGL Emulator)
 - PeytonPlayz595's modified OpenGL Emulator 
 - 2002-2008 LWJGL Project
