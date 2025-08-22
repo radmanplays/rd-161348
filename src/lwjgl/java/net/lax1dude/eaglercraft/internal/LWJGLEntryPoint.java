@@ -3,7 +3,7 @@ package net.lax1dude.eaglercraft.internal;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import com.mojang.rubydung.RubyDung;
+import com.mojang.minecraft.RubyDung;
 
 import net.lax1dude.eaglercraft.EagRuntime;
 import net.lax1dude.eaglercraft.EagUtils;
