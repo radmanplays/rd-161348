@@ -268,6 +268,9 @@ public class RubyDung implements Runnable {
 		this.pick(a);
 		int var8;
 		while(Mouse.next()) {
+			if (Mouse.getEventButtonState()) {
+				Mouse.setGrabbed(true);
+			}
 			if(Mouse.getEventButton() == 1 && Mouse.getEventButtonState() && this.hitResult != null) {
 				Tile frustum = Tile.tiles[this.level.getTile(this.hitResult.x, this.hitResult.y, this.hitResult.z)];
 				boolean i = this.level.setTile(this.hitResult.x, this.hitResult.y, this.hitResult.z, 0);
