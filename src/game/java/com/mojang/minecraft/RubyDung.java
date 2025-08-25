@@ -412,7 +412,7 @@ public class RubyDung implements Runnable {
 			GL11.glFogf(GL11.GL_FOG_DENSITY, 0.06F);
 			GL11.glFog(GL11.GL_FOG_COLOR, this.fogColor1);
 			GL11.glEnable(GL11.GL_LIGHTING);
-			GL11.glEnable(GL11.GL_COLOR_MATERIAL);
+//			GL11.glEnable(GL11.GL_COLOR_MATERIAL);
 			float br = 0.6F;
 //			GL11.glLightModel(GL11.GL_LIGHT_MODEL_AMBIENT, this.getBuffer(br, br, br, 1.0F));
 		}
